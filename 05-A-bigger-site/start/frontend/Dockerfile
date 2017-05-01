@@ -1,10 +1,14 @@
 FROM node
 
+WORKDIR /app
+
+COPY package.json /app
+RUN npm install
+
+COPY . /app
+
 ENV NODE_ENV production
 ENV PORT 3000
+EXPOSE 3000
 
-# TODO: add the content to start the Node app:
-# copy the content into place
-# npm install
-# let traffic flow in on port 3000
-# npm start
+CMD ["npm", "start"]
