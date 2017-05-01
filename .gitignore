@@ -1,6 +1,5 @@
 node_modules
 .suo
-bin
 obj
 .idea
 *.user
