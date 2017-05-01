@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  zooto:
+    build: backend
+    ports:
+      - "5000"
+      # don't expose it to the world, only to the frontend
+
+  frontend:
+    build: frontend
+    ports:
+      - "3000:3000"
+    links:
+      - zooto
+      # now the url to the backend service is just http://backend:5000/
