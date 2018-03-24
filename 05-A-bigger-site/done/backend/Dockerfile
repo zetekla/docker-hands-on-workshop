@@ -1,4 +1,4 @@
-FROM microsoft/dotnet
+FROM microsoft/dotnet:1.1.2-sdk
 
 WORKDIR /app
 COPY backend.csproj .

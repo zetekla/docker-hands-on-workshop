@@ -3,6 +3,7 @@ const request = require('request');
 
 // Get backend ip:
 // `docker container inspect --format "{{ .NetworkSettings.IPAddress }}" containernamehere`
+// to find this IPAddress, cli: `docker inspect <backendId> , the alternative way to find it.
 const BACKEND = 'http://172.17.0.2:5000';
 
 let router = express.Router();
